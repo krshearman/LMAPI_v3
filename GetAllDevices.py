@@ -8,9 +8,9 @@ import time
 import hmac
 
 # - Account Info - replace with your own values
-AccessId = ""
-AccessKey = ""
 Company = ""
+AccessKey = ""
+AccessId = ""
 
 #Request Info
 httpVerb ='GET'
