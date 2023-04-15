@@ -27,7 +27,7 @@ epoch = str(int(time.time() * 1000))
 requestVars = httpVerb + epoch + data + resourcePath
 
 # Construct signature
-hmac1 = hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest()
+hmac1 = hmac.new(AccessKey.encode(), msg=requestVars.encode(), digestmod=hashlib.sha256).hexdigest()
 signature = base64.b64encode(hmac1.encode())
 
 # Construct headers
@@ -36,11 +36,11 @@ headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version
 
 # Make request
 response = requests.get(url, data=data, headers=headers)
-#response.json()
+
 
 # Print status and body of response
-print('Response Status:',response.status_code)
-print('Response Body:',response.content)
+print('Response Status:', response.status_code)
+print('Response Body:', response.content)
 
 
 
