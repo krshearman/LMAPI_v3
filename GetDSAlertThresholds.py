@@ -18,7 +18,6 @@ deviceGroupId = 245
 dsId = 1413
 resourcePath = f'/device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings'
 data = ''
-
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
 
