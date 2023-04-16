@@ -8,13 +8,13 @@ import time
 import hmac
 
 # - Account Info - replace with your own values
-Company = ""
-AccessKey = ""
-AccessId = ""
+Company = "lmkendallshearman"
+AccessKey = "lma_+E~WkD7pb_ydeH3_Zt(9{)N~W69a4i%im2j83b[b7{m9U+]KAm3YHuVc4)[9LZjgzODM1M2ItNTcxMS00YzFjLTgwYjYtMWU5NTVkNjU1OTE1L4wWrkh"
+AccessId = "6A7cPfTTwq4KS9N9PkcZ"
 
 # Request Info
 httpVerb ='PATCH'
-# Changes a reports retention from High Flexibility to High Security
+# Changes a report's retention from High Flexibility to High Security
 reportId = 24
 resourcePath = f'/report/reports/{reportId}'
 data = '{"reportLinkExpire": "High Security"}'
