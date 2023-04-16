@@ -14,9 +14,9 @@ AccessId = ""
 
 # Request Info
 httpVerb ='DELETE'
-# This deletes report with id of 6
-id = 6
-resourcePath = f'/report/reports/{id}'
+# This deletes report with id of 8
+reportid = 8
+resourcePath = f'/report/reports/{reportid}'
 data = ''
 
 # Construct URL

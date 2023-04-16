@@ -14,9 +14,9 @@ AccessId = ""
 
 # Request Info
 httpVerb ='DELETE'
-# This deletes group 26 property named location
-group = 26
-resourcePath = f'/device/groups/{group}/properties/location'
+# This deletes group 245's property named location
+deviceGid = 245
+resourcePath = f'/device/groups/{deviceGid}/properties/location'
 data = ''
 
 # Construct URL

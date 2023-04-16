@@ -14,7 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
-# Gets a list of collectors by id and build
+# This gets a list of all collectors by id and build
 resourcePath = '/setting/collector/collectors'
 data = ''
 queryParam = '?fields=id,build'

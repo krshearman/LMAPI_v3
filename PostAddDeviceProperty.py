@@ -16,11 +16,10 @@ AccessId = ""
 
 # Request Info
 httpVerb ='POST'
-# Patches a device property. Doesn't override an inherited Property
+# Changes a device property. Doesn't override an inherited Property
 deviceId = 804
 resourcePath = f'/device/devices/{deviceId}/properties'
-data = '{"name": "test2", "value": "testProperty2"}'
-
+data = '{"name": "somefancyproperty", "value": "fancy"}'
 
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath

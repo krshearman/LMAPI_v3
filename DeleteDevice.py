@@ -14,7 +14,9 @@ AccessId = ""
 
 # Request Info
 httpVerb = 'DELETE'
-resourcePath = '/device/devices/810'
+# This deletes device with ID of 811
+deviceId = 811
+resourcePath = f'/device/devices/{deviceId}'
 data = ''
 
 # Construct URL

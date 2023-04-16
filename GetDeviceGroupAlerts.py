@@ -14,7 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
-# Gets alerts based on a device group and severity level of 2
+# This gets alerts based on a device group and severity level of 2
 group = 16
 resourcePath = f'/device/groups/{group}/alerts'
 data = ''

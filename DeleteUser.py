@@ -14,8 +14,8 @@ AccessId = ""
 
 # Request Info
 httpVerb = 'DELETE'
-# This deletes the user with id of 24
-userId = 24
+# This deletes the user with id of 23
+userId = 23
 resourcePath = f'/setting/admins/{userId}'
 data = ''
 

@@ -14,7 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='PATCH'
-# Changes a report's retention from High Flexibility to High Security
+# This disables monitoring for a website
 websiteId = 35
 resourcePath = f"/website/websites/{websiteId}"
 data = '{"disableAlerting": true, "stopMonitoring": true}'

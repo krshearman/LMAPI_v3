@@ -17,7 +17,7 @@ httpVerb ='PATCH'
 # Updates Dashboard group name
 dashGid = 24
 resourcePath = f'/dashboard/groups/{dashGid}'
-data = '{"name": "Lab_Dashboard_Group2", "description": "New Description", "parentId": 1}'
+data = '{"name": "Lab_Dashboard_Group100", "description": "Some description here", "parentId": 1}'
 
 # data = ''
 # Construct URL

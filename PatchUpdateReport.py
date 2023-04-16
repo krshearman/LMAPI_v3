@@ -17,7 +17,7 @@ httpVerb ='PATCH'
 # Changes a report's retention from High Flexibility to High Security
 reportId = 24
 resourcePath = f'/report/reports/{reportId}'
-data = '{"reportLinkExpire": "High Security"}'
+data = '{"reportLinkExpire": "High Flexibility"}'
 
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath

@@ -7,36 +7,37 @@ import base64
 import time
 import hmac
 
-#Account Info
+# Account Info
 Company = ""
 AccessKey = ""
 AccessId = ""
 
-#Request Info
+# Request Info
 httpVerb ='POST'
+# This adds a dummy device to the portal. Please note that this device will register as dead within 30 - 45 minutes maximum.
 resourcePath = '/device/devices'
-data = '{"name":"DummyDeviceSuccess21","displayName":"DummyDeviceSuccess21","hostGroupIds":16,"preferredCollectorId":42}'
+data = '{"name":"DummyDevice007","displayName":"DummyDevice007","hostGroupIds":16,"preferredCollectorId":42}'
 
-#Construct URL
+# Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
 
-#Get current time in milliseconds
+# Get current time in milliseconds
 epoch = str(int(time.time() * 1000))
 
-#Concatenate Request details
+# Concatenate Request details
 requestVars = httpVerb + epoch + data + resourcePath
 
-#Construct signature
+# Construct signature
 hmac1 = hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest()
 signature = base64.b64encode(hmac1.encode())
 
-#Construct headers
+# Construct headers
 auth = 'LMv1 ' + AccessId + ':' + signature.decode() + ':' + epoch
-headers = {'Content-Type':'application/json','Authorization':auth, 'X-Version':'3'}
+headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version': '3'}
 
-#Make request
+# Make request
 response = requests.post(url, data=data, headers=headers)
 
-#Print status and body of response
-print('Response Status:',response.status_code)
-print('Response Body:',response.content)
+# Print status and body of response
+print('Response Status:', response.status_code)
+print('Response Body:', response.content)

@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This gets group level alert thresholds for a datasource
 deviceGroupId = 245
 dsId = 1413
 resourcePath = f'/device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings'

@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This displays all devices in the portal
 resourcePath = '/device/devices'
 data = ''
 

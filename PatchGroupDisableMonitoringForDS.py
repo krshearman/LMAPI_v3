@@ -14,7 +14,8 @@ AccessId = ""
 
 # Request Info
 httpVerb ='PATCH'
-# Disables a DataSource across a group of resources
+# Disables a DataSource across a group of resources.
+# "stopMonitoring": false turns monitoring on across a group of resources.
 deviceGid = 231
 deviceDS = 12141235
 resourcePath = f'/device/groups/{deviceGid}/datasources/{deviceDS}'

@@ -15,30 +15,31 @@ AccessId = ""
 
 #Request Info
 httpVerb ='POST'
+# This creates a new admin user
 resourcePath = '/setting/admins'
 queryParams =''
-data = '{"roles":[{"name":"administrator"}],"username":"SomeUserName","password":"Password1234!", "firstName": "Some", "lastName": "Name", "email": "some.user@logicmonitor.com"}'
+data = '{"roles":[{"name":"administrator"}],"username":"JamesBond007","password":"Password1234!", "firstName": "James", "lastName": "Bond", "email": "some.user@logicmonitor.com"}'
 
-#Construct URL
+# Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath + queryParams
 
-#Get current time in milliseconds
+# Get current time in milliseconds
 epoch = str(int(time.time() * 1000))
 
-#Concatenate Request details
+# Concatenate Request details
 requestVars = httpVerb + epoch + data + resourcePath
 
-#Construct signature
+# Construct signature
 hmac1 = hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest()
 signature = base64.b64encode(hmac1.encode())
 
-#Construct headers
+# Construct headers
 auth = 'LMv1 ' + AccessId + ':' + signature.decode() + ':' + epoch
 headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version': '3'}
 
-#Make request
+# Make request
 response = requests.post(url, data=data, headers=headers)
 
-#Print status and body of response
-print('Response Status:',response.status_code)
-print('Response Body:',response.content)
+# Print status and body of response
+print('Response Status:', response.status_code)
+print('Response Body:', response.content)

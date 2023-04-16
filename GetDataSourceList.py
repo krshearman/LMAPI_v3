@@ -16,7 +16,7 @@ AccessId = ""
 httpVerb ='GET'
 
 resourcePath = "/setting/datasources"
-# gets the first 100 datasources
+# This displays the content of the first 100 DataSources, including the scripts used.
 data = ''
 queryParams = "?size=100"
 

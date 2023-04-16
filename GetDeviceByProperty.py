@@ -17,6 +17,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This displays a device's displayname and id, filtered by a displayname containing "ec2"
 resourcePath = '/device/devices'
 data = ''
 queryParams = '?fields=displayName,id&filter=displayName~"ec2"'
@@ -37,7 +38,7 @@ signature = base64.b64encode(hmac1.encode())
 
 # Construct headers
 auth = 'LMv1 ' + AccessId + ':' + signature.decode() + ':' + epoch
-headers = {'Content-Type':'application/json','Authorization':auth, 'X-Version':'3'}
+headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version': '3'}
 
 # Make request
 response = requests.get(url, data=data, headers=headers)

@@ -14,14 +14,11 @@ AccessId = ""
 
 # Request Info
 httpVerb ='PATCH'
-# Patches a device property. Doesn't override an inherited Property
+# Patches a device property. Doesn't override an inherited property.
 deviceId = 804
-resourcePath = f'/device/devices/804/properties/location'
-data = '{"name": "location", "value": "Boise,Idaho"}'
+resourcePath = f'/device/devices/{deviceId}/properties/location'
+data = '{"name": "location", "value": "Charleston, SC"}'
 
-
-
-# data = ''
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
 

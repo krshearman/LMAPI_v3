@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This gets a list of SDTs
 resourcePath = '/sdt/sdts'
 data = ''
 

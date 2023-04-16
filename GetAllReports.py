@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This displays a list of all reports
 resourcePath = '/report/reports'
 
 # Construct URL

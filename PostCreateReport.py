@@ -7,38 +7,37 @@ import base64
 import time
 import hmac
 
-#Account Info
+# Account Info
 Company = ""
 AccessKey = ""
 AccessId = ""
 
-#Request Info
+# Request Info
 httpVerb ='POST'
+# This creates a report
 resourcePath = '/report/reports'
-data = '{"type":"Alert threshold","name":"MyAlertThresholdReport","format":"HTML","description":"My Report Description","delivery":"none","groupFullPath":"Website","deviceDisplayName":"ip-172-31-37-162.us-west-2.compute.interal", "dataSourceInstanceName":"HTTP-80"}'
+data = '{"type":"Alert threshold","name":"AlertThresholdReport007","format":"HTML","description":"Report sent to the agent 007","delivery":"none","groupFullPath":"Website","deviceDisplayName":"ip-172-31-37-162.us-west-2.compute.interal", "dataSourceInstanceName":"HTTP-80"}'
 
-#Construct URL
+# Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
 
-#Get current time in milliseconds
+# Get current time in milliseconds
 epoch = str(int(time.time() * 1000))
 
-#Concatenate Request details
+# Concatenate Request details
 requestVars = httpVerb + epoch + data + resourcePath
 
-#print(requestVars)
-
-#Construct signature
+# Construct signature
 hmac1 = hmac.new(AccessKey.encode(),msg=requestVars.encode(),digestmod=hashlib.sha256).hexdigest()
 signature = base64.b64encode(hmac1.encode())
 
-#Construct headers
+# Construct headers
 auth = 'LMv1 ' + AccessId + ':' + signature.decode() + ':' + epoch
-headers = {'Content-Type':'application/json','Authorization':auth, 'X-Version': '3'}
+headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version': '3'}
 
-#Make request
+# Make request
 response = requests.post(url, data=data, headers=headers)
 
-#Print status and body of response
-print('Response Status:',response.status_code)
-print('Response Body:',response.content)
+# Print status and body of response
+print('Response Status:', response.status_code)
+print('Response Body:', response.content)

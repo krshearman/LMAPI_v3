@@ -14,8 +14,9 @@ AccessId = ""
 
 # Request Info
 httpVerb ='POST'
+# This adds a device group
 resourcePath = '/device/groups/'
-data = '{"name":"LinuxGroup3", "appliesTo": "isLinux()", "customProperties":[{"name":"location","value":"New York, NY"}]}'
+data = '{"name":"LinuxGroup007", "appliesTo": "isLinux()", "customProperties":[{"name":"location","value":"Paris, France"}]}'
 
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath

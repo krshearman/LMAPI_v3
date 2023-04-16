@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+# This gets a list of all users
 resourcePath = '/setting/admins'
 data = ''
 

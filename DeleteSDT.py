@@ -15,7 +15,7 @@ AccessId = ""
 # Request Info
 httpVerb = 'DELETE'
 # This deletes an SDT based on its id
-sdtId = "DSI_4"
+sdtId = "HG_5"
 resourcePath = f'/sdt/sdts/{sdtId}'
 data = ''
 
