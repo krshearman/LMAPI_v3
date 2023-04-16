@@ -8,9 +8,9 @@ import time
 import hmac
 
 # - Account Info - replace with your own values
-Company = "lmkendallshearman"
-AccessKey = "lma_+E~WkD7pb_ydeH3_Zt(9{)N~W69a4i%im2j83b[b7{m9U+]KAm3YHuVc4)[9LZjgzODM1M2ItNTcxMS00YzFjLTgwYjYtMWU5NTVkNjU1OTE1L4wWrkh"
-AccessId = "6A7cPfTTwq4KS9N9PkcZ"
+Company = ""
+AccessKey = ""
+AccessId = ""
 
 # Request Info
 httpVerb ='PATCH'
