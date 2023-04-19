@@ -7,7 +7,7 @@ import base64
 import time
 import hmac
 
-# Account Info
+# Account Information
 Company = ""
 AccessKey = ""
 AccessId = ""
