@@ -15,10 +15,20 @@ AccessId = ""
 # Request Info
 httpVerb ='POST'
 # This adds a DataSource instance to a device
-deviceId = 1
-dsId = 102
+
+# The deviceId below should equal the id of the device within the portal. For example, this number can be found in your
+# browser's address bar. For my portal, I used this: https://lmkendallshearman.logicmonitor.com/santaba/uiv3/device/index.jsp#tree/-13-d-804.
+# The device ID is the number after d-.
+
+deviceId = 1 #enter the device ID
+
+# Getting the datasource ID is trickier. On the resource you'd like to add instances for PingMulti, click
+# "Add Monitored Instance" from the dropdown to the right of the Manage Dialogue. With Chrome dev tools open,
+# follow the steps to manually add a dummy instance with an IP address. Identify the datasource ID in the headers.
+
+dsId = 37 #enter the dsId
 resourcePath = f'/device/devices/{deviceId}/devicedatasources/{dsId}/instances'
-data = '{"dataSourceName":"Microsoft_Windows_Services","displayName":"SNMP Trap","description":"Test Add SNMP service","wildValue":"SNMPTRAP","wildValue2":""}'
+data = '{"dataSourceName":"PingMulti-","displayName":"ResourceNameTest","description":"Google IP add Test Add IP to PingMulti","wildValue":"8.8.8.8"}'
 
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
