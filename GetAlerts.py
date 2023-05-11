@@ -14,6 +14,7 @@ AccessId = ""
 
 # Request Info
 httpVerb ='GET'
+
 # This displays all alerts in the portal. Use offset to adjust starting delimiter.
 resourcePath = f'/alert/alerts'
 data = ''
