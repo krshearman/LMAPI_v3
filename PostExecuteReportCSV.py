@@ -15,6 +15,7 @@ AccessId = ""
 # Request Info
 httpVerb ='POST'
 # This creates a report and sends it to your email
+
 reportId = 2
 resourcePath = f'/report/reports/{reportId}/executions'
 data = '{"receiveEmails": "your.email@yourorg.com"}'
