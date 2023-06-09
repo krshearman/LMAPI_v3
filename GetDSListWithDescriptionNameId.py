@@ -45,7 +45,7 @@ headers = {'Content-Type': 'application/json', 'Authorization': auth, 'X-Version
 response = requests.get(url, data=data, headers=headers)
 dataresp = json.loads(response.content)
 
-print(dataresp)
+#print(dataresp)
 data = (dataresp['items'])
 for i in range(len(data)):
     print(data[i]['id'])
