@@ -7,9 +7,6 @@ import base64
 import time
 import hmac
 
-## Returns device/s name & id filtered on displayName
-
-
 # Account Info
 Company = ""
 AccessKey = ""
