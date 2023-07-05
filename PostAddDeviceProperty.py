@@ -16,8 +16,11 @@ AccessId = ""
 
 # Request Info
 httpVerb ='POST'
-# Changes a device property. Doesn't override an inherited Property
+# Adds a device property.
+
+# Define the device id below
 deviceId = 804
+
 resourcePath = f'/device/devices/{deviceId}/properties'
 data = '{"name": "somefancyproperty", "value": "fancy"}'
 
