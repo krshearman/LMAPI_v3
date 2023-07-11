@@ -14,9 +14,12 @@ AccessId = ""
 
 # Request Info
 httpVerb ='POST'
-# This adds a dummy device to the portal. Please note that this device will register as dead within 30 - 45 minutes maximum.
+# This adds a dummy device to the portal. Please note that this device will register as dead within 30 - 45 minutes maximum. You need to alter the values below to match the
+# device you intend to add.
+
 resourcePath = '/device/devices'
-data = '{"name":"DummyDevice007","displayName":"DummyDevice007","hostGroupIds":16,"preferredCollectorId":42}'
+# If you're not assigning the device to an ABCG, you will need to define preferredCollectorId instead.
+data = '{"name":"DummyDeviceTest1","displayName":"DummyDeviceTest1","hostGroupIds":16,"autoBalancedCollectorGroupId":11}'
 
 # Construct URL
 url = 'https://'+ Company +'.logicmonitor.com/santaba/rest' + resourcePath
